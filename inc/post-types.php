@@ -3,7 +3,6 @@
 
 
 function acf_tester_register_post_types() {
-	var_dump("rgfg");exit();
 	register_post_type('books',array(
 		'label'			=> 'Books',
 		'public'		=> true,
