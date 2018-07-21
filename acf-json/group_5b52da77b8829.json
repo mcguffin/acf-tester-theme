@@ -18,8 +18,8 @@
             "layouts": {
                 "5b52da897fa46": {
                     "key": "5b52da897fa46",
-                    "name": "",
-                    "label": "",
+                    "name": "a_layout",
+                    "label": "A Layout",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -124,6 +124,25 @@
                             "delay": 0
                         },
                         {
+                            "key": "field_5b53022ff0f45",
+                            "label": "Rich text (Delayed)",
+                            "name": "rich_text_delayed",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 1
+                        },
+                        {
                             "key": "field_5b52dadcce9b2",
                             "label": "Choice with Others",
                             "name": "choice_with_others",
@@ -136,13 +155,18 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": [],
+                            "choices": {
+                                "Nasty": "Nasty",
+                                "Bollocks": "Bollocks",
+                                "Yadda": "Yadda",
+                                "Yaddayadda": "Yaddayadda"
+                            },
                             "allow_custom": 1,
                             "save_custom": 1,
                             "default_value": [],
-                            "layout": "",
+                            "layout": "vertical",
                             "toggle": 0,
-                            "return_format": "",
+                            "return_format": "value",
                             "show_column": 0,
                             "show_column_weight": 1000,
                             "allow_quickedit": 0,
@@ -164,7 +188,7 @@
                             "min": "",
                             "max": "",
                             "insert": "append",
-                            "library": "",
+                            "library": "all",
                             "min_width": "",
                             "min_height": "",
                             "min_size": "",
@@ -277,7 +301,10 @@
                         "class": "",
                         "id": ""
                     },
-                    "choices": [],
+                    "choices": {
+                        "Gulp": "Gulp",
+                        "Gelb": "Gelb"
+                    },
                     "allow_custom": 1,
                     "save_custom": 1,
                     "default_value": [],
@@ -461,5 +488,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532159945
+    "modified": 1532166760
 }

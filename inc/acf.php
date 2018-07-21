@@ -164,3 +164,12 @@ add_shortcode( 'acf_form', function($atts,$content){
 	var_dump($atts);
 	acf_form($atts['id']);
 } );
+
+
+add_filter('acf/fields/google_map/api',function($api){
+	$api_key_file = get_template_directory().'/~gm-api-key.php';
+	if ( file_exists($api_key_file) ) {
+		$api['key'] = include $api_key_file;
+	}
+	return $api;
+});
