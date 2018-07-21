@@ -159,6 +159,34 @@
                 "operator": "==",
                 "value": "acf_other_theme_mod"
             }
+        ],
+        [
+            {
+                "param": "customizer",
+                "operator": "==",
+                "value": "acf-post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "customizer",
+                "operator": "==",
+                "value": "the_choices_opt"
+            }
+        ],
+        [
+            {
+                "param": "customizer",
+                "operator": "==",
+                "value": "the_choices_mod"
+            }
         ]
     ],
     "menu_order": 0,
@@ -169,5 +197,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528816956
+    "modified": 1529074482
 }

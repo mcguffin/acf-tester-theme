@@ -1,0 +1,71 @@
+{
+    "key": "group_5b4f44ab508d1",
+    "title": "Bar",
+    "fields": [
+        {
+            "key": "field_5b4f44b8538ca",
+            "label": "Bollock-Color",
+            "name": "bollock-color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#123456",
+            "show_column": 1,
+            "show_column_sortable": 0,
+            "show_column_weight": 200,
+            "allow_quickedit": 1,
+            "allow_bulkedit": 0
+        },
+        {
+            "key": "field_5b4f44cb538cb",
+            "label": "Bollock-Background",
+            "name": "bollock-background",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#fedcba",
+            "show_column": 1,
+            "show_column_sortable": 0,
+            "show_column_weight": 225,
+            "allow_quickedit": 1,
+            "allow_bulkedit": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "bollocks"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "foo_bar_post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1531924222
+}

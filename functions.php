@@ -16,7 +16,13 @@ function acf_tester_init_acf() {
 			'id'			=> 'some_acf_panel',
 			'title'			=> 'ACF-Panel',
 			'description'	=> 'Some Settings brougt to you by ACF.',
-			'priority'		=> 200,
+			'priority'		=> 20,
+		) );
+
+		acf_add_customizer_section( array(
+			'title'			=> 'ACF-Post',
+			'description'	=> 'Some ACF-Fields.',
+			'storage_type'	=> 'post',
 		) );
 
 		$post_id = 'acf_theme_mod';
@@ -27,6 +33,7 @@ function acf_tester_init_acf() {
 			'post_id'		=> 'acf_theme_mod',
 		) );
 		$acf_tester_theme_mods[] = $post_id;
+
 
 		$post_id = 'acf_other_theme_mod';
 		acf_add_customizer_section( array(
@@ -51,10 +58,19 @@ function acf_tester_init_acf() {
 
 		acf_add_customizer_section( array(
 			'panel'			=> $panel,
-			'title'			=> 'ACF-Section (Option)',
-			'description'	=> 'Same values as Options Page `acf_option`',
+			'title'			=> 'Option: Choices',
+			'description'	=> 'Same values ...',
 			'storage_type'	=> 'option',
-			'post_id'		=> 'acf_option',
+			'post_id'		=> 'the_choices_opt',
+		) );
+
+
+		acf_add_customizer_section( array(
+			'panel'			=> $panel,
+			'title'			=> 'ThemeMod: Choices',
+			'description'	=> 'Same values ...',
+			'storage_type'	=> 'theme_mod',
+			'post_id'		=> 'the_choices_mod',
 		) );
 	}
 
