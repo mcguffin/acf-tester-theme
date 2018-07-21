@@ -8,91 +8,6 @@
  */
 
 
-function acf_tester_init_acf() {
-	global $acf_tester_theme_mods;
-	$acf_tester_theme_mods = array();
-	if ( function_exists('acf_add_customizer_panel') && function_exists('acf_add_customizer_section') ) {
-		$panel = acf_add_customizer_panel( array(
-			'id'			=> 'some_acf_panel',
-			'title'			=> 'ACF-Panel',
-			'description'	=> 'Some Settings brougt to you by ACF.',
-			'priority'		=> 20,
-		) );
-
-		acf_add_customizer_section( array(
-			'title'			=> 'ACF-Post',
-			'description'	=> 'Some ACF-Fields.',
-			'storage_type'	=> 'post',
-		) );
-
-		$post_id = 'acf_theme_mod';
-		acf_add_customizer_section( array(
-			'panel'			=> $panel,
-			'title'			=> 'ACF-Section (Theme Mod)',
-			'description'	=> 'Some ACF-Fields.',
-			'post_id'		=> 'acf_theme_mod',
-		) );
-		$acf_tester_theme_mods[] = $post_id;
-
-
-		$post_id = 'acf_other_theme_mod';
-		acf_add_customizer_section( array(
-			'panel'			=> $panel,
-			'title'			=> 'ACF-Section (Other Theme Mod)',
-			'description'	=> 'Some ACF-Fields.',
-			'post_id'		=> $post_id,
-		) );
-		$acf_tester_theme_mods[] = $post_id;
-
-
-		foreach ( array( 'Content', 'jQuery', 'Relational' ) as $acf_group ) {
-			$post_id = 'acf_' . sanitize_key( $acf_group );
-			acf_add_customizer_section( array(
-				'panel'			=> $panel,
-				'title'			=> $acf_group,
-				'description'	=> 'Some more Settings brougt to you by ACF.',
-				'post_id'		=> $post_id,
-			) );
-			$acf_tester_theme_mods[] = $post_id;
-		}
-
-		acf_add_customizer_section( array(
-			'panel'			=> $panel,
-			'title'			=> 'Option: Choices',
-			'description'	=> 'Same values ...',
-			'storage_type'	=> 'option',
-			'post_id'		=> 'the_choices_opt',
-		) );
-
-
-		acf_add_customizer_section( array(
-			'panel'			=> $panel,
-			'title'			=> 'ThemeMod: Choices',
-			'description'	=> 'Same values ...',
-			'storage_type'	=> 'theme_mod',
-			'post_id'		=> 'the_choices_mod',
-		) );
-	}
-
-	if ( function_exists('acf_add_options_sub_page') ) {
-		acf_add_options_sub_page( array(
-			'page_title'	=> 'ACF Theme Options',
-			'description'	=> 'Some more Settings brougt to you by ACF.',
-			'post_id'		=> 'acf_option',
-			'parent_slug'	=> 'themes.php',
-		) );
-	}
-
-	if ( function_exists( 'acf_register_form' ) ) {
-
-	}
-
-
-}
-
-add_action('init','acf_tester_init_acf');
-
-
 
 if ( ! function_exists( 'acf_tester_setup' ) ) :
 	/**
@@ -243,6 +158,14 @@ require get_template_directory() . '/inc/customizer.php';
  * Post Types.
  */
 require get_template_directory() . '/inc/post-types.php';
+
+/**
+ * Implement the Custom Header feature.
+ */
+if ( function_exists( 'acf' ) ) {
+	require get_template_directory() . '/inc/acf.php';	
+}
+
 
 /**
  * Load Jetpack compatibility file.

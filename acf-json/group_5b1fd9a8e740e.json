@@ -1,6 +1,6 @@
 {
     "key": "group_5b1fd9a8e740e",
-    "title": "Layout",
+    "title": "Fields – Layout",
     "fields": [
         {
             "key": "field_5b1fd9adccd8c",
@@ -140,7 +140,7 @@
             {
                 "param": "customizer",
                 "operator": "==",
-                "value": "acf_option"
+                "value": "acf-post"
             }
         ]
     ],
@@ -152,5 +152,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528918902
+    "modified": 1532156494
 }

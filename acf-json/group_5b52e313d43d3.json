@@ -1,47 +1,9 @@
 {
-    "key": "group_5b1fd8929dc69",
-    "title": "Fields – Content",
+    "key": "group_5b52e313d43d3",
+    "title": "QuickEdit – Content",
     "fields": [
         {
-            "key": "field_5b1fd8b7908da",
-            "label": "Content Wysiwyg Editor",
-            "name": "content_wysiwyg_editor",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_5b210ce1bebe2",
-            "label": "Content Wysiwyg Editor Basic",
-            "name": "content_wysiwyg_editor_copy",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_5b1fd8ce908dc",
+            "key": "field_5b52e313d7384",
             "label": "Content Gallery",
             "name": "content_gallery",
             "type": "gallery",
@@ -64,11 +26,11 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "show_column": 0,
+            "show_column": 1,
             "show_column_weight": 1000
         },
         {
-            "key": "field_5b1fd896908d7",
+            "key": "field_5b52e313d7393",
             "label": "Content Image",
             "name": "content_image",
             "type": "image",
@@ -90,13 +52,13 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "show_column": 0,
+            "show_column": 1,
             "show_column_weight": 1000,
-            "allow_quickedit": 0,
-            "allow_bulkedit": 0
+            "allow_quickedit": 1,
+            "allow_bulkedit": 1
         },
         {
-            "key": "field_5b1fd8a4908d8",
+            "key": "field_5b52e313d73a7",
             "label": "Content File",
             "name": "content_file",
             "type": "file",
@@ -113,13 +75,13 @@
             "min_size": "",
             "max_size": "",
             "mime_types": "",
-            "show_column": 0,
+            "show_column": 1,
             "show_column_weight": 1000,
-            "allow_quickedit": 0,
-            "allow_bulkedit": 0
+            "allow_quickedit": 1,
+            "allow_bulkedit": 1
         },
         {
-            "key": "field_5b1fd8c3908db",
+            "key": "field_5b52e313d73b5",
             "label": "Content oEmbed",
             "name": "content_oembed",
             "type": "oembed",
@@ -133,7 +95,7 @@
             },
             "width": "",
             "height": "",
-            "show_column": 0,
+            "show_column": 1,
             "show_column_weight": 1000
         }
     ],
@@ -142,14 +104,21 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "book"
             }
         ],
         [
             {
-                "param": "customizer",
+                "param": "taxonomy",
                 "operator": "==",
-                "value": "acf_content"
+                "value": "all"
+            }
+        ],
+        [
+            {
+                "param": "user_form",
+                "operator": "==",
+                "value": "all"
             }
         ]
     ],
@@ -159,7 +128,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": 0,
     "description": "",
-    "modified": 1532156460
+    "modified": 1532159211
 }
