@@ -52,8 +52,6 @@ function acf_tester_init_customizer() {
 		$acf_tester_theme_mods[] = $post_id;
 
 	}
-
-
 }
 
 function acf_tester_init_frontend_forms() {
@@ -64,11 +62,14 @@ function acf_tester_init_frontend_forms() {
 
 		/* (int|string) The post ID to load data from and save data to. Defaults to the current post ID.
 		Can also be set to 'new_post' to create a new post on submit */
-		'post_id'				=> false,
+		'post_id'				=> 'new_post',
 
 		/* (array) An array of post data used to create a post. See wp_insert_post for available parameters.
 		The above 'post_id' setting must contain a value of 'new_post' */
-		'new_post'				=> false,
+		'new_post'				=> array(
+			'post_title'	=> 'Submitted on ' . date(get_option( 'date_format' ) . ' '.get_option( 'time_format' )),
+			'post_type'		=> 'submission',
+		),
 
 		/* (array) An array of field group IDs/keys to override the fields displayed in this form */
 		'field_groups'			=> false,
@@ -99,7 +100,7 @@ function acf_tester_init_frontend_forms() {
 		'html_after_fields'		=> '',
 
 		/* (string) The text displayed on the submit button */
-		'submit_value'			=> __("Update", 'acf'),
+		'submit_value'			=> __("Submit", 'acf'),
 
 		/* (string) A message displayed above the form after being redirected. Can also be set to false for no message */
 		'updated_message'		=> __("Post updated", 'acf'),
@@ -152,3 +153,14 @@ add_action('init','acf_tester_init_customizer');
 add_action('init','acf_tester_init_frontend_forms');
 
 add_action('init','acf_tester_init_options_page');
+
+// acf form shortcode
+add_action('template_redirect',function(){
+	if ( is_singular() && false !== strpos(get_queried_object()->post_content, '[acf_form') ) {
+		acf_form_head();
+	}
+});
+add_shortcode( 'acf_form', function($atts,$content){
+	var_dump($atts);
+	acf_form($atts['id']);
+} );

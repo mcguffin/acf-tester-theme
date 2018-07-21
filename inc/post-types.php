@@ -40,6 +40,17 @@ function acf_tester_register_post_types() {
 		)
 	));
 
+
+
+	register_post_type('submission',array(
+		'label'			=> 'Submission',
+		'public'		=> false,
+		'has_archive'	=> false,
+		'show_ui'		=> true,
+		'menu_position'	=> 35,
+		'supports'		=> false,
+	));
+
 }
 
 

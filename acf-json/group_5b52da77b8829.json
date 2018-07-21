@@ -444,6 +444,13 @@
                 "operator": "==",
                 "value": "acf-options-acf-theme-options"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
         ]
     ],
     "menu_order": 0,
@@ -454,5 +461,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532158278
+    "modified": 1532159945
 }

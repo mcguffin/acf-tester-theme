@@ -166,6 +166,13 @@
                 "operator": "==",
                 "value": "acf-sectioncurrentpost"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "submission"
+            }
         ]
     ],
     "menu_order": 0,
@@ -176,5 +183,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532158537
+    "modified": 1532160598
 }
