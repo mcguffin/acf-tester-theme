@@ -61,7 +61,7 @@ if ( is_home() || is_front_page() ) {
 	global $acf_tester_theme_mods;
 
 	foreach ( $acf_tester_theme_mods as $theme_mod ) {
-		acf_dump_fields( $theme_mod );
+		acf_tester_dump_fields( $theme_mod );
 	}
 
 }

@@ -25,7 +25,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php acf_dump_fields( get_the_ID() ); ?>
+	<?php acf_tester_dump_fields( get_the_ID() ); ?>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

@@ -176,7 +176,7 @@ add_filter('acf/fields/google_map/api',function($api){
 
 
 
-function acf_dump_fields( $post_id, $fields = null ) {
+function acf_tester_dump_fields( $post_id, $fields = null ) {
 	if ( is_numeric( $post_id ) ) {
 		$field_group_filter = array(
 			'post_id'		=> $post_id,
