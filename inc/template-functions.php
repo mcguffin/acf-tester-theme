@@ -18,20 +18,10 @@ function acf_tester_body_classes( $classes ) {
 	}
 
 	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	if ( ! is_active_sidebar( 'sidebar' ) ) {
 		$classes[] = 'no-sidebar';
 	}
 
 	return $classes;
 }
 add_filter( 'body_class', 'acf_tester_body_classes' );
-
-/**
- * Add a pingback url auto-discovery header for single posts, pages, or attachments.
- */
-function acf_tester_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
-	}
-}
-add_action( 'wp_head', 'acf_tester_pingback_header' );

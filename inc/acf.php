@@ -161,7 +161,6 @@ add_action('template_redirect',function(){
 	}
 });
 add_shortcode( 'acf_form', function($atts,$content){
-	var_dump($atts);
 	acf_form($atts['id']);
 } );
 
@@ -173,3 +172,49 @@ add_filter('acf/fields/google_map/api',function($api){
 	}
 	return $api;
 });
+
+
+
+
+function acf_dump_fields( $post_id, $fields = null ) {
+	if ( is_numeric( $post_id ) ) {
+		$field_group_filter = array(
+			'post_id'		=> $post_id,
+		);
+	} else {
+		$field_group_filter = array(
+			'customizer'	=> $post_id,
+			// 'taxonomy' => '',
+			//
+		);
+
+		// options pages
+		foreach ( acf_get_options_pages() as $page ) {
+			if ( $page['post_id'] === $post_id ) {
+				$field_group_filter['options_page'] = $page['menu_slug'];
+				break;
+			}
+		}
+	}
+
+	?>
+	<pre><?php
+		printf( "<strong>Post-ID: %s\n%s</strong>\n\n", $post_id, str_repeat( '=', mb_strlen($post_id) + 9 ) );
+		foreach ( acf_get_field_groups( $field_group_filter ) as $field_group ) {
+
+			printf( "<strong>%s\n%s</strong>\n", $field_group['title'], str_repeat('-',mb_strlen($field_group['title'])) );
+
+			$fields = acf_get_fields( $field_group['ID'] );
+			foreach ( $fields as $field ) {
+				if ( empty( $field['name'] ) ) {
+					continue;
+				}
+				printf( '<strong>%s</strong> %s' . "\n", $field['name'], var_export( get_field( $field['key'], $post_id ), true ) );
+
+			}
+			echo "\n";
+		}
+	?></pre>
+	<?php
+
+}

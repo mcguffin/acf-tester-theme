@@ -14,22 +14,6 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<pre><?php
-		foreach ( array('choice_select', 'choice_checkbox', 'choice_radio_button', 'choice_button_group', 'choice_truefalse') as $field ) {
-			echo "// Field: {$field}\n";
-			the_field($field);
-			echo "\n";
-		}
-	?></pre>
-<?php foreach ( array('the_choices_mod','the_choices_opt') as $post_id ) { ?>
-	<pre><?php
-		foreach ( array('choice_select', 'choice_checkbox', 'choice_radio_button', 'choice_button_group', 'choice_truefalse') as $field ) {
-			echo "// Field: {$field} Post: {$post_id}\n";
-			the_field($field,$post_id);
-			echo "\n";
-		}
-	?></pre>
-<?php } ?>
 	<div class="entry-content">
 		<?php
 		the_content();
@@ -40,6 +24,8 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
+
+	<?php acf_dump_fields( get_the_ID() ); ?>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

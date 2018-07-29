@@ -135,11 +135,6 @@ function acf_tester_scripts() {
 add_action( 'wp_enqueue_scripts', 'acf_tester_scripts' );
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -150,11 +145,6 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
  * Post Types.
  */
 require get_template_directory() . '/inc/post-types.php';
@@ -163,13 +153,5 @@ require get_template_directory() . '/inc/post-types.php';
  * Implement the Custom Header feature.
  */
 if ( function_exists( 'acf' ) ) {
-	require get_template_directory() . '/inc/acf.php';	
-}
-
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+	require get_template_directory() . '/inc/acf.php';
 }
