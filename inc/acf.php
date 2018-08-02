@@ -6,50 +6,87 @@ function acf_tester_init_customizer() {
 	$acf_tester_theme_mods = array();
 
 	if ( function_exists('acf_add_customizer_panel') && function_exists('acf_add_customizer_section') ) {
-		$panel = acf_add_customizer_panel( array(
-			'id'			=> 'some_acf_panel',
-			'title'			=> 'ACF-Panel',
+		$opt_panel = acf_add_customizer_panel( array(
+			'id'			=> 'acf_options_panel',
+			'title'			=> 'ACF Options',
 			'description'	=> 'Some Settings brougt to you by ACF.',
 			'priority'		=> 20,
 		) );
 
+		$mod_panel = acf_add_customizer_panel( array(
+			'id'			=> 'acf_theme_mod_panel',
+			'title'			=> 'ACF Theme Mods',
+			'description'	=> 'Some Settings brougt to you by ACF.',
+			'priority'		=> 20,
+		) );
+
+		$post_panel = acf_add_customizer_panel( array(
+			'id'			=> 'acf_post_panel',
+			'title'			=> 'ACF Post',
+			'description'	=> 'Some Settings brougt to you by ACF.',
+			'priority'		=> 20,
+		) );
+
+		$term_panel = acf_add_customizer_panel( array(
+			'id'			=> 'acf_term_panel',
+			'title'			=> 'ACF Term',
+			'description'	=> 'Some Settings brougt to you by ACF.',
+			'priority'		=> 20,
+		) );
+
+
+
+
+
 		acf_add_customizer_section( array(
-			'title'			=> 'ACF-Section (Current Post)',
+			'title'			=> 'Current Post',
 			'description'	=> 'Some ACF-Fields.',
 			'storage_type'	=> 'post',
+			'panel'			=> $post_panel
 		) );
-
-		$post_id = 'acf_theme_mod';
 		acf_add_customizer_section( array(
-			'panel'			=> $panel,
-			'title'			=> 'ACF-Section (Theme Mod)',
+			'title'			=> 'Current Term',
 			'description'	=> 'Some ACF-Fields.',
-			'post_id'		=> $post_id,
-			'storage_type'	=> 'theme_mod',
+			'storage_type'	=> 'term',
+			'panel'			=> $term_panel
 		) );
-		$acf_tester_theme_mods[] = $post_id;
 
 
-		$post_id = 'acf_other_theme_mod';
-		acf_add_customizer_section( array(
-			'panel'			=> $panel,
-			'title'			=> 'ACF-Section (Other Theme Mod)',
+
+
+		$acf_tester_theme_mods[] = acf_add_customizer_section( array(
+			'panel'			=> $mod_panel,
+			'title'			=> 'Theme Mod',
 			'description'	=> 'Some ACF-Fields.',
 			'storage_type'	=> 'theme_mod',
-			'post_id'		=> $post_id,
+			'post_id'		=> 'acf_theme_mod',
 		) );
-		$acf_tester_theme_mods[] = $post_id;
 
-		// exprected result: sync between optios apge and customizer
-		$post_id = 'acf_option';
+
+		$acf_tester_theme_mods[] = acf_add_customizer_section( array(
+			'panel'			=> $mod_panel,
+			'title'			=> 'Other Theme Mod',
+			'description'	=> 'Some ACF-Fields.',
+			'storage_type'	=> 'theme_mod',
+			'post_id'		=> 'acf_other_theme_mod',
+		) );
+
+
 		acf_add_customizer_section( array(
-			'panel'			=> $panel,
-			'title'			=> 'ACF-Section (Option)',
+			'panel'			=> $opt_panel,
+			'title'			=> 'Option Basics',
 			'description'	=> 'Some ACF-Fields.',
 			'storage_type'	=> 'option',
 			'post_id'		=> 'acf_option',
 		) );
-		$acf_tester_theme_mods[] = $post_id;
+
+		acf_add_customizer_section( array(
+			'panel'			=> $opt_panel,
+			'title'			=> 'Option Repeatables',
+			'description'	=> 'Some ACF-Fields.',
+			'storage_type'	=> 'option',
+			'post_id'		=> 'acf_option',
+		) );
 
 	}
 }

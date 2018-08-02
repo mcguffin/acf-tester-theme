@@ -164,7 +164,7 @@
             {
                 "param": "customizer",
                 "operator": "==",
-                "value": "acf-sectioncurrentpost"
+                "value": "acf_option"
             }
         ],
         [
@@ -172,6 +172,27 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "submission"
+            }
+        ],
+        [
+            {
+                "param": "customizer",
+                "operator": "==",
+                "value": "acf_theme_mod"
+            }
+        ],
+        [
+            {
+                "param": "customizer",
+                "operator": "==",
+                "value": "currentpost"
+            }
+        ],
+        [
+            {
+                "param": "customizer",
+                "operator": "==",
+                "value": "currentterm"
             }
         ]
     ],
@@ -183,5 +204,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532160598
+    "modified": 1532869447
 }
