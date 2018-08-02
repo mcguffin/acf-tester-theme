@@ -25,7 +25,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			the_field('leaflet_field');
+			the_field('leaflet_map_iframe');
 
 			get_template_part( 'template-parts/content', 'page' );
 
