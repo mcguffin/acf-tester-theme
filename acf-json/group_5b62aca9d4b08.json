@@ -19,10 +19,13 @@
             "center_lat": "",
             "center_lng": "",
             "zoom": "",
-            "height": 400,
+            "height": 410,
             "allow_map_layers": 1,
-            "default_leaflet_layers": "",
-            "default_osm_layer": "mapnik",
+            "default_leaflet_layers": [
+                "",
+                "OpenStreetMap"
+            ],
+            "default_osm_layer": "hot",
             "address": "",
             "map_layers": []
         },
@@ -45,8 +48,12 @@
             "zoom": "",
             "height": 400,
             "allow_map_layers": 1,
-            "default_leaflet_layers": "",
-            "default_osm_layer": "mapnik",
+            "default_leaflet_layers": [
+                "",
+                "OpenStreetMap",
+                "OpenSeaMap"
+            ],
+            "default_osm_layer": "cyclemap",
             "address": "",
             "map_layers": []
         }
@@ -73,5 +80,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1533193626
+    "modified": 1533210758
 }

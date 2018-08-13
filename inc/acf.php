@@ -42,13 +42,13 @@ function acf_tester_init_customizer() {
 			'title'			=> 'Current Post',
 			'description'	=> 'Some ACF-Fields.',
 			'storage_type'	=> 'post',
-			'panel'			=> $post_panel
+//			'panel'			=> $post_panel
 		) );
 		acf_add_customizer_section( array(
 			'title'			=> 'Current Term',
 			'description'	=> 'Some ACF-Fields.',
 			'storage_type'	=> 'term',
-			'panel'			=> $term_panel
+//			'panel'			=> $term_panel
 		) );
 
 
@@ -87,6 +87,7 @@ function acf_tester_init_customizer() {
 			'storage_type'	=> 'option',
 			'post_id'		=> 'acf_option',
 		) );
+
 
 	}
 }

@@ -26,6 +26,7 @@ get_header();
 			the_post();
 
 			the_field('leaflet_map_iframe');
+			the_field('leaflet_map_js');
 
 			get_template_part( 'template-parts/content', 'page' );
 
