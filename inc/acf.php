@@ -77,7 +77,7 @@ function acf_tester_init_customizer() {
 			'title'			=> 'Option Basics',
 			'description'	=> 'Some ACF-Fields.',
 			'storage_type'	=> 'option',
-			'post_id'		=> 'acf_option',
+			'post_id'		=> 'acf_option_1',
 		) );
 
 		acf_add_customizer_section( array(
@@ -85,7 +85,7 @@ function acf_tester_init_customizer() {
 			'title'			=> 'Option Repeatables',
 			'description'	=> 'Some ACF-Fields.',
 			'storage_type'	=> 'option',
-			'post_id'		=> 'acf_option',
+			'post_id'		=> 'acf_option_2',
 		) );
 
 
@@ -178,12 +178,14 @@ function acf_tester_init_frontend_forms() {
 }
 
 function acf_tester_init_options_page() {
-	acf_add_options_sub_page( array(
-		'page_title'	=> 'ACF Theme Options',
-		'description'	=> 'Some more Settings brougt to you by ACF.',
-		'post_id'		=> 'acf_option',
-		'parent_slug'	=> 'themes.php',
-	) );
+	if ( function_exists('acf_add_options_sub_page')) {
+		acf_add_options_sub_page( array(
+			'page_title'	=> 'ACF Theme Options',
+			'description'	=> 'Some more Settings brougt to you by ACF.',
+			'post_id'		=> 'acf_option',
+			'parent_slug'	=> 'themes.php',
+		) );
+	}
 }
 
 add_action('init','acf_tester_init_customizer');
@@ -191,6 +193,15 @@ add_action('init','acf_tester_init_customizer');
 add_action('init','acf_tester_init_frontend_forms');
 
 add_action('init','acf_tester_init_options_page');
+
+
+// ACF 5.8 --- blocks
+function acf_tester_render_leaflet_map() {
+	the_field( 'leaflet_map_field' );
+}
+
+add_action('acf/init',function(){
+});
 
 // acf form shortcode
 add_action('template_redirect',function(){
@@ -219,7 +230,7 @@ function acf_tester_dump_fields( $post_id, $fields = null ) {
 		$field_group_filter = array(
 			'post_id'		=> $post_id,
 		);
-	} else {
+	} else if( function_exists('acf_get_options_pages') ) {
 		$field_group_filter = array(
 			'customizer'	=> $post_id,
 			// 'taxonomy' => '',
@@ -247,7 +258,8 @@ function acf_tester_dump_fields( $post_id, $fields = null ) {
 				if ( empty( $field['name'] ) ) {
 					continue;
 				}
-				printf( '<strong>%s</strong> %s' . "\n", $field['name'], var_export( get_field( $field['key'], $post_id ), true ) );
+				printf( '<strong>%s (get_field)</strong> %s' . "\n", $field['name'], var_export( get_field( $field['key'], $post_id ), true ) );
+				printf( '<strong>%s (get_theme_mod)</strong> %s' . "\n", $field['name'], var_export( get_theme_mod( $post_id ), true ) );
 
 			}
 			echo "\n";

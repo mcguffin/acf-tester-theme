@@ -1,29 +1,11 @@
 {
-    "key": "group_5b1fd8e3e69c1",
-    "title": "Fields – jQuery",
+    "key": "group_acf_qef_jquery",
+    "title": "QuickEdit Fields jQuery",
     "fields": [
         {
-            "key": "field_5b1fd8ecb2834",
-            "label": "jQuery Google Map",
-            "name": "jquery_google_map",
-            "type": "google_map",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "center_lat": "",
-            "center_lng": "",
-            "zoom": "",
-            "height": ""
-        },
-        {
-            "key": "field_5b1fd906b2835",
-            "label": "jQuery Date Picker",
-            "name": "jquery_date_picker",
+            "key": "field_5004e4ec14024",
+            "label": "Date Picker",
+            "name": "date_picker",
             "type": "date_picker",
             "instructions": "",
             "required": 0,
@@ -36,16 +18,16 @@
             "display_format": "d\/m\/Y",
             "return_format": "d\/m\/Y",
             "first_day": 1,
-            "show_column": 0,
-            "show_column_sortable": 0,
-            "show_column_weight": 1000,
-            "allow_quickedit": 0,
-            "allow_bulkedit": 0
+            "show_column": 1,
+            "show_column_sortable": 1,
+            "show_column_weight": 1410,
+            "allow_quickedit": 1,
+            "allow_bulkedit": 1
         },
         {
-            "key": "field_5b1fd917b2836",
-            "label": "jQuery Date Time Picker",
-            "name": "jquery_date_time_picker",
+            "key": "field_5004e4f514025",
+            "label": "Date Time Picker",
+            "name": "date_time_picker",
             "type": "date_time_picker",
             "instructions": "",
             "required": 0,
@@ -58,16 +40,16 @@
             "display_format": "d\/m\/Y g:i a",
             "return_format": "d\/m\/Y g:i a",
             "first_day": 1,
-            "show_column": 0,
-            "show_column_sortable": 0,
-            "show_column_weight": 1000,
+            "show_column": 1,
+            "show_column_sortable": 1,
+            "show_column_weight": 1420,
             "allow_quickedit": 0,
             "allow_bulkedit": 0
         },
         {
-            "key": "field_5b1fd921b2837",
-            "label": "jQuery Time Picker",
-            "name": "jquery_time_picker",
+            "key": "field_5004e50214026",
+            "label": "Time Picker",
+            "name": "time_picker",
             "type": "time_picker",
             "instructions": "",
             "required": 0,
@@ -79,16 +61,16 @@
             },
             "display_format": "g:i a",
             "return_format": "g:i a",
-            "show_column": 0,
-            "show_column_sortable": 0,
-            "show_column_weight": 1000,
-            "allow_quickedit": 0,
-            "allow_bulkedit": 0
+            "show_column": 1,
+            "show_column_sortable": 1,
+            "show_column_weight": 1430,
+            "allow_quickedit": 1,
+            "allow_bulkedit": 1
         },
         {
-            "key": "field_5b1fd92bb2838",
-            "label": "jQuery Color Picker",
-            "name": "jquery_color_picker",
+            "key": "field_5004e50c14027",
+            "label": "Color Picker",
+            "name": "color_picker",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
@@ -99,11 +81,11 @@
                 "id": ""
             },
             "default_value": "",
-            "show_column": 0,
-            "show_column_sortable": 0,
-            "show_column_weight": 1000,
-            "allow_quickedit": 0,
-            "allow_bulkedit": 0
+            "show_column": 1,
+            "show_column_sortable": 1,
+            "show_column_weight": 1440,
+            "allow_quickedit": 1,
+            "allow_bulkedit": 1
         }
     ],
     "location": [
@@ -111,14 +93,21 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "acf-quef-test"
             }
         ],
         [
             {
-                "param": "customizer",
+                "param": "taxonomy",
                 "operator": "==",
-                "value": "acf_jquery"
+                "value": "acf-quef-test"
+            }
+        ],
+        [
+            {
+                "param": "user_form",
+                "operator": "==",
+                "value": "all"
             }
         ]
     ],
@@ -128,7 +117,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": 0,
     "description": "",
-    "modified": 1532156483
+    "modified": 1566806984
 }

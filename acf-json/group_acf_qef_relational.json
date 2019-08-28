@@ -1,11 +1,11 @@
 {
-    "key": "group_5b1fd93db32d7",
-    "title": "Fields – Relational",
+    "key": "group_acf_qef_relational",
+    "title": "QuickEdit Fields Relational",
     "fields": [
         {
-            "key": "field_5b1fd941e3467",
-            "label": "Relational Link",
-            "name": "relational_link",
+            "key": "field_5007e53bd8e28",
+            "label": "Link",
+            "name": "link",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -15,108 +15,16 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "return_format": "array",
+            "show_column": 1,
+            "show_column_weight": 1510,
+            "allow_quickedit": 1,
+            "allow_bulkedit": 1
         },
         {
-            "key": "field_5b1fd954e3468",
-            "label": "Relational Post Object",
-            "name": "relational_post_object",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "show_column": 0,
-            "show_column_weight": 1000,
-            "ui": 1
-        },
-        {
-            "key": "field_5b1fd963e3469",
-            "label": "Relational Page Link",
-            "name": "relational_page_link",
-            "type": "page_link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0,
-            "show_column": 0,
-            "show_column_weight": 1000
-        },
-        {
-            "key": "field_5b1fd96fe346a",
-            "label": "Relational Relationship",
-            "name": "relational_relationship",
-            "type": "relationship",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [],
-            "taxonomy": [],
-            "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
-            ],
-            "elements": "",
-            "min": "",
-            "max": "",
-            "return_format": "object",
-            "show_column": 0,
-            "show_column_weight": 1000
-        },
-        {
-            "key": "field_5b1fd97ee346b",
-            "label": "Relational Taxonomy",
-            "name": "relational_taxonomy",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "category",
-            "field_type": "checkbox",
-            "allow_null": 0,
-            "add_term": 1,
-            "save_terms": 0,
-            "load_terms": 0,
-            "return_format": "id",
-            "show_column": 0,
-            "show_column_weight": 1000,
-            "allow_quickedit": 0,
-            "allow_bulkedit": 0,
-            "multiple": 0
-        },
-        {
-            "key": "field_5b1fd997e346c",
-            "label": "Relational User",
-            "name": "relational_user",
+            "key": "field_5007e57bd8e2d",
+            "label": "User",
+            "name": "user",
             "type": "user",
             "instructions": "",
             "required": 0,
@@ -129,7 +37,105 @@
             "role": "",
             "allow_null": 0,
             "multiple": 0,
-            "return_format": "array"
+            "return_format": "array",
+            "show_column": 1,
+            "show_column_weight": 1520
+        },
+        {
+            "key": "field_5007e544d8e29",
+            "label": "Post Object",
+            "name": "post_object",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "show_column": 1,
+            "show_column_weight": 1530,
+            "ui": 1
+        },
+        {
+            "key": "field_5007e551d8e2a",
+            "label": "Page Link",
+            "name": "page_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0,
+            "show_column": 1,
+            "show_column_weight": 1540
+        },
+        {
+            "key": "field_5007e55fd8e2b",
+            "label": "Relationship",
+            "name": "relationship",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object",
+            "show_column": 1,
+            "show_column_weight": 1550
+        },
+        {
+            "key": "field_5007e56cd8e2c",
+            "label": "Taxonomy",
+            "name": "taxonomy",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "checkbox",
+            "add_term": 1,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "show_column": 1,
+            "show_column_weight": 1560,
+            "allow_quickedit": 1,
+            "allow_bulkedit": 1,
+            "multiple": 0,
+            "allow_null": 0
         }
     ],
     "location": [
@@ -137,14 +143,21 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "acf-quef-test"
             }
         ],
         [
             {
-                "param": "customizer",
+                "param": "taxonomy",
                 "operator": "==",
-                "value": "acf_relational"
+                "value": "acf-quef-test"
+            }
+        ],
+        [
+            {
+                "param": "user_form",
+                "operator": "==",
+                "value": "all"
             }
         ]
     ],
@@ -154,7 +167,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": 0,
     "description": "",
-    "modified": 1532156504
+    "modified": 1566806990
 }

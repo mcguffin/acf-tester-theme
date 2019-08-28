@@ -1,38 +1,11 @@
 {
-    "key": "group_5b52e313d43d3",
-    "title": "QuickEdit – Content",
+    "key": "group_acf_qef_content",
+    "title": "QuickEdit Fields Content",
     "fields": [
         {
-            "key": "field_5b52e313d7384",
-            "label": "Content Gallery",
-            "name": "content_gallery",
-            "type": "gallery",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "min": "",
-            "max": "",
-            "insert": "append",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "show_column": 1,
-            "show_column_weight": 1000
-        },
-        {
-            "key": "field_5b52e313d7393",
-            "label": "Content Image",
-            "name": "content_image",
+            "key": "field_5003e46f830e5",
+            "label": "Image",
+            "name": "image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -43,7 +16,7 @@
                 "id": ""
             },
             "return_format": "array",
-            "preview_size": "thumbnail",
+            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -52,15 +25,16 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
+            "dropzone": 0,
             "show_column": 1,
-            "show_column_weight": 1000,
+            "show_column_weight": 1310,
             "allow_quickedit": 1,
             "allow_bulkedit": 1
         },
         {
-            "key": "field_5b52e313d73a7",
-            "label": "Content File",
-            "name": "content_file",
+            "key": "field_5003e477830e6",
+            "label": "File",
+            "name": "file",
             "type": "file",
             "instructions": "",
             "required": 0,
@@ -75,15 +49,16 @@
             "min_size": "",
             "max_size": "",
             "mime_types": "",
+            "dropzone": 0,
             "show_column": 1,
-            "show_column_weight": 1000,
+            "show_column_weight": 1320,
             "allow_quickedit": 1,
             "allow_bulkedit": 1
         },
         {
-            "key": "field_5b52e313d73b5",
-            "label": "Content oEmbed",
-            "name": "content_oembed",
+            "key": "field_5003e48c830e8",
+            "label": "oEmbed",
+            "name": "oembed",
             "type": "oembed",
             "instructions": "",
             "required": 0,
@@ -96,7 +71,37 @@
             "width": "",
             "height": "",
             "show_column": 1,
-            "show_column_weight": 1000
+            "show_column_weight": 1330
+        },
+        {
+            "key": "field_5003e496830e9",
+            "label": "Gallery",
+            "name": "gallery",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "dropzone": 0,
+            "show_column": 1,
+            "show_column_weight": 1340
         }
     ],
     "location": [
@@ -104,14 +109,14 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "book"
+                "value": "acf-quef-test"
             }
         ],
         [
             {
                 "param": "taxonomy",
                 "operator": "==",
-                "value": "all"
+                "value": "acf-quef-test"
             }
         ],
         [
@@ -130,5 +135,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1532159211
+    "modified": 1566806977
 }

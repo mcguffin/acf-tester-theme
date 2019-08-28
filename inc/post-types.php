@@ -32,23 +32,13 @@ function acf_tester_register_post_types() {
 			'singular_name'	=> 'Genre',
 		)
 	));
-	register_taxonomy('nastiness',array('book','person'),array(
+	register_taxonomy('nastiness',array('post','book','person'),array(
 		'public'	=> true,
+		'show_admin_column'	=> true,
 		'labels'	=> array(
 			'name'			=> 'Nastiness Levels',
 			'singular_name'	=> 'Nastiness Level',
 		)
-	));
-
-
-
-	register_post_type('submission',array(
-		'label'			=> 'Submission',
-		'public'		=> false,
-		'has_archive'	=> false,
-		'show_ui'		=> true,
-		'menu_position'	=> 35,
-		'supports'		=> false,
 	));
 
 }

@@ -1,11 +1,11 @@
 {
-    "key": "group_5b52e3104280d",
-    "title": "QuickEdit – Choice",
+    "key": "group_acf_qef_choice_var",
+    "title": "QuickEdit Fields Choice (Variant)",
     "fields": [
         {
-            "key": "field_5b52e31045349",
-            "label": "Choice Select",
-            "name": "choice_select",
+            "key": "field_5001e65ecb556",
+            "label": "Select",
+            "name": "select",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -16,27 +16,28 @@
                 "id": ""
             },
             "choices": {
-                "first": "First",
-                "second": "Second",
-                "third": "Third"
+                "one": "One",
+                "two": "Two",
+                "three": "Three",
+                "four": "Four"
             },
             "default_value": [],
             "allow_null": 0,
             "multiple": 0,
-            "ui": 0,
+            "ui": 1,
+            "ajax": 1,
             "return_format": "value",
             "show_column": 1,
             "show_column_sortable": 1,
-            "show_column_weight": 1000,
+            "show_column_weight": 1210,
             "allow_quickedit": 1,
             "allow_bulkedit": 1,
-            "ajax": 0,
             "placeholder": ""
         },
         {
-            "key": "field_5b52e31045358",
-            "label": "Choice Checkbox",
-            "name": "choice_checkbox",
+            "key": "field_5001e65ecb561",
+            "label": "Checkbox",
+            "name": "checkbox",
             "type": "checkbox",
             "instructions": "",
             "required": 0,
@@ -47,25 +48,26 @@
                 "id": ""
             },
             "choices": {
-                "first": "First",
-                "second": "Second",
-                "third": "Third"
+                "one": "One",
+                "two": "Two",
+                "three": "Three",
+                "four": "Four"
             },
-            "allow_custom": 0,
+            "allow_custom": 1,
+            "save_custom": 1,
             "default_value": [],
             "layout": "vertical",
             "toggle": 0,
             "return_format": "value",
             "show_column": 1,
-            "show_column_weight": 1000,
+            "show_column_weight": 1220,
             "allow_quickedit": 1,
-            "allow_bulkedit": 1,
-            "save_custom": 0
+            "allow_bulkedit": 1
         },
         {
-            "key": "field_5b52e31045365",
-            "label": "Choice Radio Button",
-            "name": "choice_radio_button",
+            "key": "field_5001e65ecb56a",
+            "label": "Radio Button",
+            "name": "radio_button",
             "type": "radio",
             "instructions": "",
             "required": 0,
@@ -76,54 +78,27 @@
                 "id": ""
             },
             "choices": {
-                "first": "First",
-                "second": "Second",
-                "third": "Third"
+                "one": "One",
+                "two": "Two",
+                "three": "Three",
+                "four": "Four"
             },
             "allow_null": 0,
-            "other_choice": 0,
+            "other_choice": 1,
+            "save_other_choice": 1,
             "default_value": "",
             "layout": "vertical",
             "return_format": "value",
             "show_column": 1,
             "show_column_sortable": 1,
-            "show_column_weight": 1000,
-            "allow_quickedit": 1,
-            "allow_bulkedit": 1,
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_5b52e31045371",
-            "label": "Choice Button Group",
-            "name": "choice_button_group",
-            "type": "button_group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "first": "First",
-                "second": "Second",
-                "third": "Third"
-            },
-            "allow_null": 0,
-            "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value",
-            "show_column": 1,
-            "show_column_sortable": 0,
-            "show_column_weight": 1000,
+            "show_column_weight": 1230,
             "allow_quickedit": 1,
             "allow_bulkedit": 1
         },
         {
-            "key": "field_5b52e3104537e",
-            "label": "Choice True \/ False",
-            "name": "choice_truefalse",
+            "key": "field_5001e65ecb579",
+            "label": "True \/ False",
+            "name": "true_false",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -135,14 +110,14 @@
             },
             "message": "",
             "default_value": 0,
-            "ui": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
             "show_column": 1,
             "show_column_sortable": 1,
-            "show_column_weight": 1000,
+            "show_column_weight": 1240,
             "allow_quickedit": 1,
-            "allow_bulkedit": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "allow_bulkedit": 1
         }
     ],
     "location": [
@@ -150,14 +125,14 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "book"
+                "value": "acf-quef-test"
             }
         ],
         [
             {
                 "param": "taxonomy",
                 "operator": "==",
-                "value": "genre"
+                "value": "acf-quef-test"
             }
         ],
         [
@@ -174,7 +149,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 0,
+    "active": 1,
     "description": "",
-    "modified": 1532159204
+    "modified": 1566988263
 }

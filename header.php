@@ -22,8 +22,10 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acf-tester' ); ?></a>
+	<?php
 
+	?>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acf-tester' ); ?></a>
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
@@ -54,17 +56,6 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-<?php
 
-
-if ( is_home() || is_front_page() ) {
-	global $acf_tester_theme_mods;
-
-	foreach ( $acf_tester_theme_mods as $theme_mod ) {
-		acf_tester_dump_fields( $theme_mod );
-	}
-
-}
-
-?>
 <div id="content" class="site-content">
+	

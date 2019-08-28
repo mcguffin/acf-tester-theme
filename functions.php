@@ -43,6 +43,7 @@ if ( ! function_exists( 'acf_tester_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'align-wide' );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -60,6 +61,15 @@ if ( ! function_exists( 'acf_tester_setup' ) ) :
 			'gallery',
 			'caption',
 		) );
+
+
+
+		add_theme_support( 'post-formats', array(
+			'aside',
+			'gallery',
+			'image',
+		) );
+
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'acf_tester_custom_background_args', array(
@@ -81,6 +91,63 @@ if ( ! function_exists( 'acf_tester_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+
+		add_image_size( 'acf-test-cropped-named', 1280, 460, true );
+		add_image_size( 'acf-test-cropped', 1280, 640, true );
+		add_image_size( 'acf-test', 480, 640, false );
+		add_filter('image_size_names_choose',function($names){
+			$names['acf-test-cropped-named'] = __('Cropped and named');
+			return $names;
+		});
+
+
+		if ( function_exists('acf_register_block_type')) {
+		acf_register_block_type([
+			'name' => 'leaflet',
+			'title' => __('Leaflet Map'),
+			'description' => __('A Map.'),
+			'category' => 'embed',
+			'icon' => 'location-alt',
+			'keywords' => array('osm', 'leaflet', 'location', 'map'),
+			//'post_types' => array('post', 'page'),
+			'mode' => 'edit', // auto|preview|edit
+			'align' => 'full',
+			// 'render_template' => 'template-parts/blocks/testimonial/testimonial.php',
+			'render_callback' => function( $block, $str, $bool, $post_id ){
+				the_field('leaflet_map_js');
+			// 	$a = func_get_args();
+			// 	echo '<pre>';
+			// 	var_dump($a);
+			// 	echo '</pre>';
+			},
+			// 'supports' => array( /* ... */ ),
+			// 'enqueue_assets'	=> 'cb'
+		]);
+
+
+		acf_register_block_type([
+			'name' => 'dropzone',
+			'title' => __('Dropzone tester'),
+			'description' => __('Testing the dropzone plugin.'),
+			'category' => 'embed',
+			'icon' => 'location-alt',
+			'keywords' => array('upload', 'file'),
+			//'post_types' => array('post', 'page'),
+			'mode' => 'edit', // auto|preview|edit
+			'align' => 'full',
+			// 'render_template' => 'template-parts/blocks/testimonial/testimonial.php',
+			'render_callback' => function( $block, $str, $bool, $post_id ){
+				wp_get_attachment_image(get_field('image'));
+			// 	$a = func_get_args();
+			// 	echo '<pre>';
+			// 	var_dump($a);
+			// 	echo '</pre>';
+			},
+			// 'supports' => array( /* ... */ ),
+			// 'enqueue_assets'	=> 'cb'
+		]);
+}
 	}
 endif;
 add_action( 'after_setup_theme', 'acf_tester_setup' );
@@ -148,6 +215,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Post Types.
  */
 require get_template_directory() . '/inc/post-types.php';
+
+/**
+ * Customizer
+ */
+require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Implement the Custom Header feature.

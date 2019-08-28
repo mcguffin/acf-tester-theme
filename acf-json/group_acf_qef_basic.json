@@ -1,11 +1,11 @@
 {
-    "key": "group_5b52e1d35a8fb",
-    "title": "QuickEdit – Basic",
+    "key": "group_acf_qef_basic",
+    "title": "QuickEdit Fields Basic",
     "fields": [
         {
-            "key": "field_5b52e1d35d619",
-            "label": "Basic Text",
-            "name": "basic_text",
+            "key": "field_5000e3f0aee8f",
+            "label": "Text",
+            "name": "text",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,14 +22,14 @@
             "maxlength": "",
             "show_column": 1,
             "show_column_sortable": 1,
-            "show_column_weight": 1000,
+            "show_column_weight": 1010,
             "allow_quickedit": 1,
             "allow_bulkedit": 1
         },
         {
-            "key": "field_5b52e1d35d63f",
-            "label": "Basic Textarea",
-            "name": "basic_textarea",
+            "key": "field_5000e3f5aee90",
+            "label": "Text Area",
+            "name": "textarea",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -45,14 +45,14 @@
             "rows": "",
             "new_lines": "",
             "show_column": 1,
-            "show_column_weight": 1000,
+            "show_column_weight": 1020,
             "allow_quickedit": 1,
             "allow_bulkedit": 1
         },
         {
-            "key": "field_5b52e1d35d64c",
-            "label": "Basic Number",
-            "name": "basic_number",
+            "key": "field_5000e409aee91",
+            "label": "Number",
+            "name": "number",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -71,14 +71,14 @@
             "step": "",
             "show_column": 1,
             "show_column_sortable": 1,
-            "show_column_weight": 1000,
+            "show_column_weight": 1030,
             "allow_quickedit": 1,
             "allow_bulkedit": 1
         },
         {
-            "key": "field_5b52e1d35d659",
-            "label": "Basic Range",
-            "name": "basic_range",
+            "key": "field_5000e417aee92",
+            "label": "Range",
+            "name": "range",
             "type": "range",
             "instructions": "",
             "required": 0,
@@ -96,14 +96,14 @@
             "append": "",
             "show_column": 1,
             "show_column_sortable": 1,
-            "show_column_weight": 1000,
+            "show_column_weight": 1040,
             "allow_quickedit": 1,
             "allow_bulkedit": 1
         },
         {
-            "key": "field_5b52e1d35d666",
-            "label": "Basic Email",
-            "name": "basic_email",
+            "key": "field_5000e425aee93",
+            "label": "E-Mail",
+            "name": "e-mail",
             "type": "email",
             "instructions": "",
             "required": 0,
@@ -119,14 +119,14 @@
             "append": "",
             "show_column": 1,
             "show_column_sortable": 1,
-            "show_column_weight": 1000,
+            "show_column_weight": 1050,
             "allow_quickedit": 1,
             "allow_bulkedit": 1
         },
         {
-            "key": "field_5b52e1d35d673",
-            "label": "Basic URL",
-            "name": "basic_url",
+            "key": "field_5000e433aee94",
+            "label": "URL",
+            "name": "url",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -140,7 +140,7 @@
             "placeholder": "",
             "show_column": 1,
             "show_column_sortable": 1,
-            "show_column_weight": 1000,
+            "show_column_weight": 1060,
             "allow_quickedit": 1,
             "allow_bulkedit": 1
         }
@@ -150,21 +150,14 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "book"
+                "value": "acf-quef-test"
             }
         ],
         [
             {
                 "param": "taxonomy",
                 "operator": "==",
-                "value": "genre"
+                "value": "acf-quef-test"
             }
         ],
         [
@@ -183,5 +176,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1532159193
+    "modified": 1566988023
 }
