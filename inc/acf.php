@@ -188,7 +188,7 @@ function acf_tester_init_options_page() {
 	}
 }
 
-add_action('init','acf_tester_init_customizer');
+//add_action('init','acf_tester_init_customizer');
 
 add_action('init','acf_tester_init_frontend_forms');
 

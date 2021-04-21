@@ -204,26 +204,28 @@ add_action( 'wp_enqueue_scripts', 'acf_tester_scripts' );
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require_once get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
+require_once get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Post Types.
  */
-require get_template_directory() . '/inc/post-types.php';
+require_once get_template_directory() . '/inc/post-types.php';
 
 /**
  * Customizer
  */
-require get_template_directory() . '/inc/customizer.php';
+require_once get_template_directory() . '/inc/customizer.php';
+
+require_once get_template_directory() . '/bundle/bundle.php';
 
 /**
  * Implement the Custom Header feature.
  */
 if ( function_exists( 'acf' ) ) {
-	require get_template_directory() . '/inc/acf.php';
+	require_once get_template_directory() . '/inc/acf.php';
 }
